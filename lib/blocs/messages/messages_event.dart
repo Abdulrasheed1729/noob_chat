@@ -22,7 +22,10 @@ class TextMessageSent extends MessagesEvent {
   List<Object> get props => [message];
 }
 
-class FileAttachmentMessageSent extends MessagesEvent {
+class ImageAttachmentMessageSent extends MessagesEvent {
+  const ImageAttachmentMessageSent({this.message});
+
+  final type.PartialImage? message;
   @override
   List<Object> get props => [];
 }

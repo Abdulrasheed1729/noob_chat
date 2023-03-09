@@ -35,6 +35,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final user = context.select((AppBloc bloc) => bloc.state.user);
     return BlocListener<UsersListBloc, UsersListState>(
       listenWhen: (previous, current) => previous.status != current.status,
       listener: (context, state) {
@@ -56,6 +57,33 @@ class HomeView extends StatelessWidget {
             ),
           ],
         ),
+        // drawer: Drawer(
+        //   child: Column(
+        //     children: [
+        //       Container(
+        //         height: 200,
+        //         color: Colors.indigo,
+        //         child: Center(
+        //           child: Column(
+        //             children: [
+        //               CachedNetworkImage(
+        //                 imageUrl: user.imageUrl!,
+        //                 height: 60,
+        //                 width: 50,
+        //                 memCacheHeight: 60,
+        //                 memCacheWidth: 50,
+        //                 imageBuilder: (context, imageProvider) => CircleAvatar(
+        //                   radius: 45,
+        //                   backgroundImage: imageProvider,
+        //                 ),
+        //               ),
+        //             ],
+        //           ),
+        //         ),
+        //       )
+        //     ],
+        //   ),
+        // ),
         body: BlocBuilder<UsersListBloc, UsersListState>(
           buildWhen: (previous, current) => previous.users != current.users,
           builder: (context, state) {

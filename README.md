@@ -30,34 +30,31 @@ This app make use of the [Bloc](https://bloc.dev) architecture to separate the a
     └── chat
 ```
 
-## Libraries and Plugins 🔌
+### Libraries and Plugins 🔌
 A brief description of the libraries used.
 
-|Name | Version|
+|Name | Usage|
 |---|---|
-  bloc| ^8.1.1
-  cached_network_image| ^3.2.3
-  cloud_firestore| ^4.4.3
-  connectivity_plus| ^3.0.3
-  cupertino_icons| ^1.0.2
-  equatable| ^2.0.5
-  file_picker| ^5.2.5
-  firebase_auth| ^4.2.9
-  firebase_core| ^2.7.0
-  firebase_storage| ^11.0.14
-  flow_builder| ^0.0.9
-  flutter_bloc| ^8.1.2
-  flutter_chat_types| ^3.6.0
-  flutter_chat_ui| ^1.6.6
-  flutter_firebase_chat_core| ^1.6.4
-  formz| ^0.4.1
-  http| ^0.13.5
-  image_picker| ^0.8.6+3
-  mime| ^1.0.4
-  open_filex| ^4.3.2
-  page_transition | ^2.0.9
-  permission_handler| ^10.2.0
-  uuid| ^3.0.7
+  bloc| For *Bloc* implementation
+  cached_network_image| For image internet caching
+  cloud_firestore| For database
+  connectivity_plus| For checking connection
+  file_picker| For picking file from the device
+  firebase_auth| For user authentication
+  firebase_core| Firebase sdk
+  firebase_storage| For storing files in the cloud
+  flow_builder| For authentication flow
+  flutter_bloc| Flutter bloc implementation
+  flutter_chat_types| Chat implementation types
+  flutter_chat_ui| 
+  flutter_firebase_chat_core| 
+  formz| For form inputs validation
+  http| 
+  image_picker| Picking image from the device
+  mime| File mime
+  open_filex| Opening files in the device
+  permission_handler| Handles device permission
+  uuid| Generates random Strings
 
 
 ### Todos 📑

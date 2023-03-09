@@ -18,6 +18,7 @@ class MessagesListPage extends StatelessWidget {
           create: (_) => MessagesBloc(
             context.read<ChatRepository>(),
             room,
+            context.read<StorageRepository>(),
           )..add(
               const MessagesListSubscriptionRequested(),
             ),
@@ -52,7 +53,7 @@ class MessagesListView extends StatelessWidget {
             title: Row(
               children: [
                 CachedNetworkImage(
-                  imageUrl: room.users[0].imageUrl!,
+                  imageUrl: room.users[1].imageUrl!,
                   height: 60,
                   width: 50,
                   memCacheHeight: 60,
@@ -78,6 +79,9 @@ class MessagesListView extends StatelessWidget {
                         context.read<MessagesBloc>().add(
                               TextMessageSent(message),
                             ),
+                    onAttachmentPressed: () => context.read<MessagesBloc>().add(
+                          const ImageAttachmentMessageSent(),
+                        ),
                     user: context.read<AuthRepository>().currentUser.toUser,
                     showUserAvatars: true,
                     useTopSafeAreaInset: true,

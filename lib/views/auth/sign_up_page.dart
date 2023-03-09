@@ -293,34 +293,3 @@ class _SignUpButton extends StatelessWidget {
     );
   }
 }
-
-// class _LoginToAccountButton extends StatelessWidget {
-//   const _LoginToAccountButton();
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return InkWell(
-//       onTap: () => Navigator.of(context).push<void>(SignUpPage.route()),
-//       child: RichText(
-//         text: const TextSpan(
-//           text: 'Already have an account? ',
-//           style: TextStyle(
-//             fontSize: 16,
-//             color: Colors.grey,
-//             fontWeight: FontWeight.w500,
-//           ),
-//           children: [
-//             TextSpan(
-//               text: 'Sign in',
-//               style: TextStyle(
-//                 fontSize: 16,
-//                 color: Colors.indigo,
-//                 fontWeight: FontWeight.w500,
-//               ),
-//             )
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
