@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "707865917133",
+    "project_id": "noob-chat-1729",
+    "storage_bucket": "noob-chat-1729.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707865917133:android:2b7ddb8244e6d6942a5b84",
+        "android_client_info": {
+          "package_name": "com.noob.dev.noob_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707865917133-mr8t3lem9hihu8q17cofljkl8iktm314.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2o-04cP9Lwy1aignqBJ5QiWuf5Y13MtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707865917133-mr8t3lem9hihu8q17cofljkl8iktm314.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "707865917133-e8vg7rieldsp7r182k11nnjjk0aqfmi5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.noob.dev.noobChat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
