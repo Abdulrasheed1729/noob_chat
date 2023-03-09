@@ -45,7 +45,7 @@ A brief description of the libraries used.
   firebase_auth| ^4.2.9
   firebase_core| ^2.7.0
   firebase_storage| ^11.0.14
-  flow_builder: ^0.0.9
+  flow_builder| ^0.0.9
   flutter_bloc| ^8.1.2
   flutter_chat_types| ^3.6.0
   flutter_chat_ui| ^1.6.6
@@ -59,3 +59,9 @@ A brief description of the libraries used.
   permission_handler| ^10.2.0
   uuid| ^3.0.7
 
+
+### Todos 📑
+- [X] Make App work
+- [ ] Update Readme
+- [ ] Add screenshots to readme
+- [ ] Make the design more beautiful.
