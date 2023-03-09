@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:noob_chat/blocs/app/app_bloc.dart';
 import 'package:noob_chat/blocs/blocs.dart';
 import 'package:noob_chat/cubits/cubits.dart';
@@ -108,51 +107,6 @@ class NoobChatView extends StatelessWidget {
           useMaterial3: true,
         ),
         home: const NoobChatAuthFlowView(),
-      ),
-    );
-  }
-}
-
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) {
-        if (mounted) {
-          final isAuthenticated =
-              context.read<AppBloc>().state.status == AppStatus.authenticated;
-
-          if (isAuthenticated) {
-            context.go(context.namedLocation('chats-list-page'));
-          } else {
-            context.go(context.namedLocation('login-page'));
-          }
-        }
-      },
-    );
-
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'Noob Chat',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
       ),
     );
   }
