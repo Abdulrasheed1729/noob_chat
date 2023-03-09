@@ -6,14 +6,11 @@ import 'package:noob_chat/utils/utils.dart';
 
 part 'login_state.dart';
 
-///
 class LoginCubit extends Cubit<LoginState> {
-  ///
   LoginCubit(this._authRepository) : super(const LoginState());
 
   final AuthRepository _authRepository;
 
-  ///
   void emailChanged(String value) {
     final email = Email.dirty(value);
     emit(
@@ -24,7 +21,6 @@ class LoginCubit extends Cubit<LoginState> {
     );
   }
 
-  ///
   void passwordChanged(String value) {
     final password = Password.dirty(value);
     emit(
@@ -35,7 +31,6 @@ class LoginCubit extends Cubit<LoginState> {
     );
   }
 
-  /// Logs in the user
   Future<void> login() async {
     if (!state.status.isValidated) return;
     emit(state.copyWith(status: FormzStatus.submissionInProgress));
