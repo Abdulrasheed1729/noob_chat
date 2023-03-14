@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
@@ -49,22 +48,38 @@ class MessagesListView extends StatelessWidget {
           backgroundColor: Colors.grey.shade700,
           appBar: AppBar(
             backgroundColor: Colors.indigo,
+            foregroundColor: Colors.white,
             centerTitle: true,
-            title: Row(
-              children: [
-                CachedNetworkImage(
-                  imageUrl: room.users[1].imageUrl!,
-                  height: 60,
-                  width: 50,
-                  memCacheHeight: 60,
-                  memCacheWidth: 50,
-                  imageBuilder: (context, imageProvider) => CircleAvatar(
-                    radius: 45,
-                    backgroundImage: imageProvider,
-                  ),
-                ),
-              ],
-            ),
+            // title: Row(
+            //   children: [
+            //     CachedNetworkImage(
+            //       imageUrl: room.users[1].imageUrl!,
+            //       height: 60,
+            //       width: 50,
+            //       memCacheHeight: 60,
+            //       memCacheWidth: 50,
+            //       imageBuilder: (context, imageProvider) => CircleAvatar(
+            //         radius: 45,
+            //         backgroundImage: imageProvider,
+            //       ),
+            //     ),
+            //     const SizedBox(width: 10),
+            //     Text(
+            //       room.users[1].firstName!,
+            //       style: const TextStyle(
+            //         fontSize: 24,
+            //         fontWeight: FontWeight.w600,
+            //       ),
+            //     )
+            //   ],
+            // ),
+
+            actions: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.more_vert_rounded),
+              )
+            ],
           ),
           body: BlocBuilder<MessagesBloc, MessagesState>(
             buildWhen: (previous, current) =>
