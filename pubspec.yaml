@@ -38,7 +38,7 @@ dependencies:
   file_picker: ^5.2.9
   firebase_auth: ^4.4.1
   firebase_core: ^2.10.0
-  firebase_storage: ^11.1.0
+  firebase_storage: ^11.1.1
   flow_builder: ^0.0.9
   flutter:
     sdk: flutter
